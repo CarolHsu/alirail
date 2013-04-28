@@ -1,0 +1,8 @@
+<h3>修改祝山線發車時間</h3>
+
+<%= form_for @chu, :url => admin_chu_path(@chu) do |f| %>
+	<%= render :partial => "form", :locals => { :f => f } %>
+	<%= f.submit "確定修改 >", :class => "btn btn-success pull-right" %>
+	<%= link_to "< 取消修改", admin_chus_path, :class => "btn" %>
+
+<% end %>

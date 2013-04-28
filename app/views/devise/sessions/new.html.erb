@@ -1,0 +1,17 @@
+<div class="hero-unit">
+<h2>登入</h2>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <%= f.label :email, "帳號" %>
+  <%= f.email_field :email, :autofocus => true %>
+
+  <%= f.label :password, "密碼" %>
+  <%= f.password_field :password %>
+
+
+  <%= f.submit "登入" , :class => "btn btn-success" %>
+<% end %>
+
+<%= render "devise/shared/links" %>
+	
+</div>

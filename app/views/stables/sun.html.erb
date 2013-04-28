@@ -1,0 +1,128 @@
+<% title("祝山線") %>
+
+<h3>祝山線</h3>
+
+
+<div class="well">
+	<h1>明日開車時間 - <span class="text-error"><%= @chuTrain.nil? ? "未發車" : @chuTrain.start_time.strftime("%H : %M") %></span></h1>
+	<p class="text-info">
+		每日下午四時左右，我們將在網站、車站、遊樂區大門口及旅客中心進行公告。 <br>
+	</p>
+	<blockquote>
+		<p>
+			祝山觀日列車，因為一年四季每天的日出時間都不一樣，<br>
+			阿里山車站會隨著每天日出時間及旅客數量做調整。<br>
+			第一班列車開車時間夏季最早約在清晨四時，冬季最早約在清晨六時。
+		</p>		
+	</blockquote>
+
+	<h4>祝山觀日平台日出時間概況表</h4>
+	
+	<table class="table table-bordered table-striped">
+		<tr>
+			<th></th>
+			<th>一月</th>
+			<th>二月</th>
+			<th>三月</th>
+			<th>四月</th>
+			<th>五月</th>
+			<th>六月</th>
+			<th>七月</th>
+			<th>八月</th>
+			<th>九月</th>
+			<th>十月</th>
+			<th>十一月</th>
+			<th>十二月</th>
+		</tr>
+		<tr>
+			<td>1-5日</td>
+			<td>7:05</td>
+			<td>7:02</td>
+			<td>6:40</td>
+			<td>6:00</td>
+			<td>5:29</td>
+			<td>5:19</td>
+			<td>5:25</td>
+			<td>5:36</td>
+			<td>5:48</td>
+			<td>6:13</td>
+			<td>6:32</td>
+			<td>6:50</td>
+		</tr>
+		<tr>
+			<td>6-10日</td>
+			<td>7:08</td>
+			<td>7:01</td>
+			<td>6:33</td>
+			<td>5:50</td>
+			<td>5:28</td>
+			<td>5:21</td>
+			<td>5:27</td>
+			<td>5:40</td>
+			<td>5:50</td>
+			<td>6:18</td>
+			<td>6:35</td>
+			<td>6:54</td>
+		</tr>
+		<tr>
+			<td>11-15日</td>
+			<td>7:06</td>
+			<td>6:54</td>
+			<td>6:28</td>
+			<td>5:42</td>
+			<td>5:25</td>
+			<td>5:19</td>
+			<td>5:30</td>
+			<td>5:41</td>
+			<td>5:56</td>
+			<td>6:20</td>
+			<td>6:37</td>
+			<td>6:57</td>
+		</tr>
+		<tr>
+			<td>16-20日</td>
+			<td>7:05</td>
+			<td>6:52</td>
+			<td>6:18</td>
+			<td>5:39</td>
+			<td>5:23</td>
+			<td>5:20</td>
+			<td>5:32</td>
+			<td>5:45</td>
+			<td>5:58</td>
+			<td>6:21</td>
+			<td>6:40</td>
+			<td>6:59</td>
+		</tr>
+		<tr>
+			<td>21-25日</td>
+			<td>7:05</td>
+			<td>6:47</td>
+			<td>6:13</td>
+			<td>5:35</td>
+			<td>5:21</td>
+			<td>5:24</td>
+			<td>5:33</td>
+			<td>5:46</td>
+			<td>6:01</td>
+			<td>6:23</td>
+			<td>6:43</td>
+			<td>7:03</td>
+		</tr>
+		<tr>
+			<td>26-31日</td>
+			<td>7:03</td>
+			<td>6:45</td>
+			<td>6:06</td>
+			<td>5:30</td>
+			<td>5:20</td>
+			<td>5:25</td>
+			<td>5:34</td>
+			<td>5:47</td>
+			<td>6:09</td>
+			<td>6:30</td>
+			<td>6:48</td>
+			<td>7:04</td>
+		</tr>
+	</table>
+</div>

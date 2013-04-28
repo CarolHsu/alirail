@@ -1,0 +1,33 @@
+<script>
+  $('.carousel').carousel(
+    interval: 600,
+    );
+</script>
+<div id="myCarousel" class="carousel slide curve-down">
+  <ol class="carousel-indicators">
+    <% 10.times do |photo| %>
+      <% if  %>
+      <li data-target="#myCarousel" data-slide-to="<%= photo %>" class="active"></li>
+      <% else %>
+      <li data-target="#myCarousel" data-slide-to="<%= photo %>" class=""></li>      
+      <% end %>
+    <% end %>
+  </ol>
+  <div class="carousel-inner">
+    <% 10.times do |photo| %>
+      <% if photo == 0 %>
+        <div class="item active">
+      <% else %>
+        <div class="item">
+      <% end %>
+          <%= image_tag("ali/#{photo}.JPG") %>
+          <div class="carousel-caption">
+            <h4>阿里山小火車</h4>
+            <p>原木小火車，櫻花日出阿里山。</p>
+          </div>
+        </div>
+    <% end %>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+</div>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Powered by shesee @ CECI Engineering Consultants, Inc., Taiwan -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "阿里山森林鐵路" %></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%= favicon_link_tag "favicon.png", :type => "image/png" %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top">
+      <nav class="navbar-inner">
+        <div class="container">
+          <%= render 'layouts/navigation' %>
+        </div>
+      </nav>
+    </header>
+    <div id="main" role="main">
+      <div class="container">
+        <div id="banner-image" class="row-fluid">
+          <div class="header">
+            <div class="curve-down">
+            <%= link_to image_tag("banner/#{random_banner}.JPG", :height => 200), root_url %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="content">
+           <div class="row">
+           	<div class="span3">
+           		<%= render 'layouts/sidebar' %>
+           	</div>
+            <div class="span9">
+              <%= render 'layouts/messages' %>
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div> <!--! end of .container -->
+    </div> <!--! end of #main -->
+    <footer>
+      <div class="footer">
+        <div class="container narrow row-fluid text-right">
+            <small>
+            交通部臺灣鐵路管理局 版權所有 ©2013 All Right Reserved.
+            </small>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

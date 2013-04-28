@@ -1,0 +1,18 @@
+<ul class="nav nav-list bs-docs-sidenav affix">
+	<li class="<%= active_nav('沼平線') %>">
+		<i class="icon-chevron-right"></i>
+		<%= link_to "沼平線", timetables_path(:line => "沼平線") %>
+	</li>
+	<li class="<%= active_nav('神木線') %>">
+		<i class="icon-chevron-right"></i>
+		<%= link_to "神木線", timetables_path(:line => "神木線") %>
+	</li>
+	<li class="<%= active_nav('sun') %>">
+		<i class="icon-chevron-right"></i>
+		<%= link_to "祝山線", chu_path %>
+	</li>
+	<li class="<%= active_nav('price') %>">
+		<i class="icon-chevron-right"></i>
+		<%= link_to "票價參考", price_path %>
+	</li>
+</ul>

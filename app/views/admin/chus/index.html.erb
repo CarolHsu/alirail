@@ -1,0 +1,30 @@
+
+
+
+
+<table class="table table-bordered table-hover table-striped">
+	<tr align="center">
+		<th>預定發車時間</th>
+		<th>
+			<%= link_to "新增", new_admin_chu_path, :class => "btn btn-info pull-right" %>	
+		</th>
+	</tr>
+	<% @chus.each do |train| %>
+		<% if !@tomorrow_train.nil? and train.start_time == @tomorrow_train.start_time %>
+			<tr class="success">
+		<% else %>
+			<tr>
+		<% end %>
+				<td>
+					<%= train.start_time.strftime("%F %I:%M%p") %>
+				</td>
+				<td>
+					<%= link_to "更改", edit_admin_chu_path(train), :class => "btn btn-info" %>
+					<%= link_to "取消", admin_chu_path(train), :method => :delete, :confirm => "確定？", :class => "btn btn-info" %>
+				</td>
+			</tr>
+	<% end %>
+</table>
+
+
+<%= link_to "查看明日發車時間", chu_path, :target => "_block", :class => "btn btn-success pull-right" %>

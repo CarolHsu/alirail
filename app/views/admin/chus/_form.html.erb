@@ -1,0 +1,14 @@
+<% if @chu.errors.any? %>
+<div class="alert alert-warning">
+	<h5>資料驗證錯誤</h5>
+	<% @chu.errors.messages.each do |name, msgs| %>
+	<ol>
+	  <% msgs.each do |msg| %>
+	  	<li> <%= msg %> </li>
+	  <% end %>		
+	</ol>	
+	<% end %>
+</div>
+<% end %>
+
+<%= datetime_select :chu, :start_time, :default => Time.now %>
