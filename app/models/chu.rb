@@ -5,9 +5,10 @@ class Chu < ActiveRecord::Base
 
   validate :duration
   validate :one_day_only_has_one_train, :on => :create
+  validate :not_past_train, :on => :create
 
   default_scope order("start_time DESC")
-  scope :live_trains, where(["(julianday(start_time) - julianday(date('now', 'localtime'))) > 0"])
+  scope :live_trains, where(["(julianday(date(start_time)) - julianday(date('now', 'localtime'))) > 0"])
   # scope :live_trains, where(["TIMEDIFF(start_time, NOW()) > 0"])
 
   # validate methods
@@ -25,9 +26,19 @@ class Chu < ActiveRecord::Base
     end
   end
 
+  def not_past_train
+    if self.start_time.to_date < Time.now.to_date
+      self.errors.add(:start_time, '不需要新增過往車次')      
+    end
+  end
+
   # scope methods
   def self.tomorrow_train
     live_trains.last
+  end
+
+  def self.sevendays_trains
+    live_trains.where(["(julianday(date('now', '7 days')) - julianday(date(start_time))) >= 0"]).reorder("start_time ASC")
   end
 
 end

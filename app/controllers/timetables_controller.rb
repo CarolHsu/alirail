@@ -1,9 +1,17 @@
 class TimetablesController < ApplicationController
   def index
     if params[:direction] == "back"
-      @trains = Timetable.where(["class_name = ?", "#{params[:line]}"]).back
+      if params[:line] == "chaoping"
+        @trains = Timetable.chaoping_line.back
+      else
+        @trains = Timetable.shenmu_line.back
+      end
     else
-      @trains = Timetable.where(["class_name = ?", "#{params[:line]}"]).forth
+      if params[:line] == "chaoping"
+        @trains = Timetable.chaoping_line.forth
+      else
+        @trains = Timetable.shenmu_line.forth
+      end
     end
   end
 end

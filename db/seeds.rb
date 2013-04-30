@@ -20,6 +20,7 @@ Timetable.create(train_code: "43", class_name: "沼平線", begin_name: "阿里�
 Timetable.create(train_code: "45", class_name: "沼平線", begin_name: "阿里山", end_name: "沼平", begin_time: "2000-01-01 14:30:00", end_time: "2000-01-01 14:36:00")
 Timetable.create(train_code: "47", class_name: "沼平線", begin_name: "阿里山", end_name: "沼平", begin_time: "2000-01-01 15:00:00", end_time: "2000-01-01 15:06:00")
 Timetable.create(train_code: "49", class_name: "沼平線", begin_name: "阿里山", end_name: "沼平", begin_time: "2000-01-01 15:30:00", end_time: "2000-01-01 15:36:00")
+Timetable.create(train_code: "51", class_name: "沼平線", begin_name: "阿里山", end_name: "沼平", begin_time: "2000-01-01 16:00:00", end_time: "2000-01-01 16:06:00", :is_extra => true)
 
 
 Timetable.create(train_code: "28", class_name: "沼平線", begin_name: "沼平", end_name: "阿里山", begin_time: "2000-01-01 09:15:00", end_time: "2000-01-01 09:21:00", :is_extra => true)
@@ -36,6 +37,7 @@ Timetable.create(train_code: "44", class_name: "沼平線", begin_name: "沼平"
 Timetable.create(train_code: "46", class_name: "沼平線", begin_name: "沼平", end_name: "阿里山", begin_time: "2000-01-01 14:45:00", end_time: "2000-01-01 14:51:00")
 Timetable.create(train_code: "48", class_name: "沼平線", begin_name: "沼平", end_name: "阿里山", begin_time: "2000-01-01 15:15:00", end_time: "2000-01-01 15:21:00")
 Timetable.create(train_code: "50", class_name: "沼平線", begin_name: "沼平", end_name: "阿里山", begin_time: "2000-01-01 15:45:00", end_time: "2000-01-01 15:51:00")
+Timetable.create(train_code: "52", class_name: "沼平線", begin_name: "沼平", end_name: "阿里山", begin_time: "2000-01-01 16:15:00", end_time: "2000-01-01 16:21:00", :is_extra => true)
 
 
 Timetable.create(train_code: "96", class_name: "神木線", begin_name: "阿里山", end_name: "神木", begin_time: "2000-01-01 09:15:00", end_time: "2000-01-01 09:22:00", :is_extra => true)
@@ -52,6 +54,8 @@ Timetable.create(train_code: "112", class_name: "神木線", begin_name: "阿里
 Timetable.create(train_code: "114", class_name: "神木線", begin_name: "阿里山", end_name: "神木", begin_time: "2000-01-01 14:45:00", end_time: "2000-01-01 14:52:00")
 Timetable.create(train_code: "116", class_name: "神木線", begin_name: "阿里山", end_name: "神木", begin_time: "2000-01-01 15:15:00", end_time: "2000-01-01 15:22:00")
 Timetable.create(train_code: "118", class_name: "神木線", begin_name: "阿里山", end_name: "神木", begin_time: "2000-01-01 15:45:00", end_time: "2000-01-01 15:52:00")
+Timetable.create(train_code: "120", class_name: "神木線", begin_name: "阿里山", end_name: "神木", begin_time: "2000-01-01 16:15:00", end_time: "2000-01-01 16:22:00", :is_extra => true)
+
 
 
 
@@ -69,3 +73,5 @@ Timetable.create(train_code: "113", class_name: "神木線", begin_name: "神木
 Timetable.create(train_code: "115", class_name: "神木線", begin_name: "神木", end_name: "阿里山", begin_time: "2000-01-01 15:00:00", end_time: "2000-01-01 15:07:00")
 Timetable.create(train_code: "117", class_name: "神木線", begin_name: "神木", end_name: "阿里山", begin_time: "2000-01-01 15:30:00", end_time: "2000-01-01 15:37:00")
 Timetable.create(train_code: "119", class_name: "神木線", begin_name: "神木", end_name: "阿里山", begin_time: "2000-01-01 16:00:00", end_time: "2000-01-01 16:07:00")
+Timetable.create(train_code: "121", class_name: "神木線", begin_name: "神木", end_name: "阿里山", begin_time: "2000-01-01 16:30:00", end_time: "2000-01-01 16:37:00", :is_extra => true)
+

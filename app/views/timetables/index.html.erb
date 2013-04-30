@@ -4,16 +4,16 @@
 		往<%= @trains.first.end_name %>, 
 		行程約 <%= trip_time(@trains.first) %>
 			<% if params[:direction] == "back" %>
-				<%= link_to "往#{@trains.first.begin_name}", timetables_path(:line => @trains.first.class_name, :direction => "forth"), :class => "btn btn-info pull-right" %>
+				<%= link_to "往#{@trains.first.begin_name}", timetables_path(:line => line_name(@trains.first.class_name) , :direction => "forth"), :class => "btn btn-info pull-right" %>
 			<% else %>
-				<%= link_to "往#{@trains.first.begin_name}", timetables_path(:line => @trains.first.class_name, :direction => "back"), :class => "btn btn-info pull-right" %>	
+				<%= link_to "往#{@trains.first.begin_name}", timetables_path(:line => line_name(@trains.first.class_name), :direction => "back"), :class => "btn btn-info pull-right" %>	
 			<% end %>
 </h3>
 
 
 <div class="alert alert-success">
 		<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
-		<h5>列車動態：</h5>
+		<h5>列車資訊：</h5>
 		<p>
 			<% if @trains.recent.nil?  %>
 				未發車

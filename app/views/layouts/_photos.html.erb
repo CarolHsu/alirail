@@ -5,7 +5,7 @@
 </script>
 <div id="myCarousel" class="carousel slide curve-down">
   <ol class="carousel-indicators">
-    <% 10.times do |photo| %>
+    <% 4.times do |photo| %>
       <% if  %>
       <li data-target="#myCarousel" data-slide-to="<%= photo %>" class="active"></li>
       <% else %>
@@ -14,7 +14,7 @@
     <% end %>
   </ol>
   <div class="carousel-inner">
-    <% 10.times do |photo| %>
+    <% 4.times do |photo| %>
       <% if photo == 0 %>
         <div class="item active">
       <% else %>

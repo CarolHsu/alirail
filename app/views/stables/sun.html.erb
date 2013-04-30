@@ -16,6 +16,28 @@
 		</p>		
 	</blockquote>
 
+	<% if @chuTrains.any? %>
+	<h4>最近七日預計發車時間</h4>
+		
+	<table class="table table-bordered table-hover table-striped">
+		<tr>
+			<th>發車日期</th>
+			<th>發車時間</th>
+		</tr>
+		<% @chuTrains.each do |chutrain| %>
+			<tr>
+				<td>
+					<%= chutrain.start_time.strftime("%m/%d") %>
+					<%= china_weekday(chutrain.start_time.strftime("%a").to_s) %>
+				</td>
+				<td>
+					<%= chutrain.start_time.strftime("%H : %M") %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+	<% end %>
+
 	<h4>祝山觀日平台日出時間概況表</h4>
 	
 	<table class="table table-bordered table-striped">
