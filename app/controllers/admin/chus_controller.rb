@@ -3,7 +3,8 @@
 
 class Admin::ChusController < ApplicationController
   layout "admin"
-  before_filter :authenticate_user!
+  before_filter :require_is_admin
+
 
   def index
     @chus = Chu.all

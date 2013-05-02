@@ -1,4 +1,8 @@
 <ul class="nav nav-list bs-docs-sidenav affix">
+	<li class="<%= active_nav('alimountain') %>">
+		<i class="icon-chevron-right"></i>
+		<%= link_to "阿里山本線", alimountain_path(:direction => "forth") %>
+	</li>
 	<li class="<%= active_nav('chaoping') %>">
 		<i class="icon-chevron-right"></i>
 		<%= link_to "沼平線", timetables_path(:line => "chaoping") %>

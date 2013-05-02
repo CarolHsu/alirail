@@ -14,7 +14,7 @@ Alirail::Application.routes.draw do
       resources :chus
     end
   end
-
+  get "alimountain" => "stables#alimountain"
   get "chu" => "stables#sun"
   get "price" => "stables#price"
   # The priority is based upon order of creation:
